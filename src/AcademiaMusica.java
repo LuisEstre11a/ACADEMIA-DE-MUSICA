@@ -129,7 +129,7 @@ public class AcademiaMusica {
                         traeInstrumento = false;
                     }
                     
-// --- LLAMADO A FUNCIONES (ASIGNACION DE COSTOS Y CALCULOS) ---
+                    // --- LLAMADO A FUNCIONES (ASIGNACIÓN DE COSTOS Y CALCULOS) ---
                     cuotaBase = calcularCuotaBase(tipoTramite);
                     mensualidad = calcularMensualidad(tipoClase);
                     costoRenta = calcularCostoRenta(traeInstrumento);
