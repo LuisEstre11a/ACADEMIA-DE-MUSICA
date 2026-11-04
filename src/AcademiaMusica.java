@@ -2,6 +2,48 @@ import java.util.Scanner;
 
 public class AcademiaMusica {
 
+// --- DEFINICIÓN DE MÉTODOS (FUNCIONES) ---
+
+    public static double calcularCuotaBase(String tipoTramite) {
+        double cuota;
+        if (tipoTramite.equalsIgnoreCase("Inscripcion")) {
+            cuota = 1500.0;
+        } else {
+            cuota = 1400.0;
+        }
+        return cuota;
+    }
+
+    public static double calcularMensualidad(String tipoClase) {
+        double mens;
+        if (tipoClase.equalsIgnoreCase("Clases privadas")) {
+            mens = 1400.0;
+        } else {
+            mens = 950.0;
+        }
+        return mens;
+    }
+
+    public static double calcularCostoRenta(boolean traeInstrumento) {
+        double renta;
+        if (traeInstrumento) {
+            renta = 0.0;
+        } else {
+            renta = 150.0;
+        }
+        return renta;
+    }
+
+    public static double calcularMontoDescuento(double cuotaBase, boolean traeInstrumento, double porcentajeDescuento) {
+        double descuento;
+        if (traeInstrumento) {
+            descuento = cuotaBase * (porcentajeDescuento / 100.0);
+        } else {
+            descuento = 0.0;
+        }
+        return descuento;
+    }
+    
     // --- ALGORITMO PRINCIPAL ---
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
