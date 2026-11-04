@@ -75,6 +75,9 @@ public class AcademiaMusica {
             opcion = scanner.nextInt();
             scanner.nextLine(); 
 
+            opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar el buffer de entrada
+
             switch (opcion) {
                 case 1:
                     // --- MODULO: REGISTRO DE ALUMNO ---
@@ -125,6 +128,7 @@ public class AcademiaMusica {
                     } else {
                         traeInstrumento = false;
                     }
+                    
 // --- LLAMADO A FUNCIONES (ASIGNACION DE COSTOS Y CALCULOS) ---
                     cuotaBase = calcularCuotaBase(tipoTramite);
                     mensualidad = calcularMensualidad(tipoClase);
